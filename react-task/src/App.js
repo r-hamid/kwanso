@@ -1,41 +1,12 @@
 import React from "react";
-import Styled from "styled-components";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 
+import { Header, LinksParent, CustomLink, Img } from "./components/styledCompStyles";
 import ListTasks from "./components/tasks/list";
 import NewTask from "./components/tasks/new";
 import BulkDeleteTasks from "./components/tasks/bulkDelete";
 import logo from './logo.svg';
 import './App.css';
-
-const Header = Styled.header`
-  height: auto;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #282c34;
-  padding: 12px;
-`;
-const Img = Styled.img`
-  height: 3rem;
-`;
-
-const LinksParent = Styled.div`
-  width: 90%;
-  text-align: left;
-`;
-
-const CustomLink = Styled.a`
-  padding: 0 12px;
-  color: #FFF;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.1rem;
-  &:hover {
-    text-decoration: underline;
-  }
-`;
 
 function App() {
   return (

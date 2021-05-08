@@ -1,41 +1,8 @@
 import React, { Fragment, useState, useEffect } from "react";
 import store from "store";
-import Styled from "styled-components";
 
 import SingleTask from "./SingleTask";
-
-const Title = Styled.h1`
-  font-size: 2.3rem;
-  font-weight: bold;
-  color: #282c34;
-`;
-
-const Paragraph = Styled.p`
-  height: 40vh;
-  font-size: 1.0rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-
-const TaskListParent = Styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-`;
-
-const Button = Styled.button`
-  margin-top: 12px;
-  padding: 10px 15px 9px;
-  border: 1px solid transparent;
-  border-radius: 7px;
-  background-color: #FF0005;
-  font-size: 1rem;
-  color: #FFF;
-  &:hover {
-    cursor: pointer;
-  }
-`;
+import { Title, TaskListParent, Button, Paragraph } from "../../styledCompStyles";
 
 const BulkDeleteTasks = (props) => {
 
@@ -76,7 +43,7 @@ const BulkDeleteTasks = (props) => {
                     <SingleTask key={task.id} task={task} taskIndex={index} selectTask={onAddSelectedTaskId} />
                   ))}
                 </TaskListParent>
-                <Button onClick={performDeletion}> Confirm Delete </Button>
+                <Button danger onClick={performDeletion}> Confirm Delete </Button>
               </Fragment>
             )
           ): (
